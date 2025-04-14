@@ -3,9 +3,21 @@
 @{
     ViewData["Title"] = "Home page";
     string name = "Edine";
+    int age = 19;
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome @name </h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @if (age > 18)
+    {
+        <p>You are eligible to vote!</p>
+    }else if (age < 18)
+    {
+        <p>You are not eligible to vote</p>
+    }
+    else
+    {
+        <p>Invalid Age</p>
+    }
+
 </div>
