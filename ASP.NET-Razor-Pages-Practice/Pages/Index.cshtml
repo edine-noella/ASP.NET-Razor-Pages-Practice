@@ -5,6 +5,7 @@
     string name = "Edine";
     int age = 19;
     char grade = 'A';
+    List<string> favoriteFoods = new List<string>(){"fries","donut","cakes","icecream"};
 }
 
 <div class="text-center">
@@ -34,6 +35,12 @@
             break;
         default:<h4>Invalid grade!</h4>
             break;
+    }
+    
+    <h4>Your favorites foods</h4>
+    @for(int i=0; i< favoriteFoods.Count; i++)
+    {
+        <li>@favoriteFoods[i]</li>
     }
 
 </div>
