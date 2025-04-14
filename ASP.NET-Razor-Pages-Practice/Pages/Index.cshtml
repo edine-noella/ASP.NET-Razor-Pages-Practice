@@ -38,8 +38,12 @@
     }
     
     <h4>Your favorites foods</h4>
-    @foreach(string food in favoriteFoods){
-        <li>@food</li>
+    @{ 
+        int counter = 0;
+    }
+    @while(counter < @favoriteFoods.Count)
+    {
+        <li>@favoriteFoods[counter++]</li>
     }
 
 </div>
