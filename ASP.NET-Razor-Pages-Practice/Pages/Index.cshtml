@@ -4,6 +4,7 @@
     ViewData["Title"] = "Home page";
     string name = "Edine";
     int age = 19;
+    char grade = 'A';
 }
 
 <div class="text-center">
@@ -18,6 +19,21 @@
     else
     {
         <p>Invalid Age</p>
+    }
+
+    @switch(grade){
+        case 'A':<h4>Excellent job!</h4>
+            break;
+        case 'B':<h4>Well done!</h4>
+            break;
+        case 'C':<h4>Needs some work!</h4>
+            break;
+        case 'D':<h4>You passed</h4>
+            break;
+        case 'F':<h4>You failed, better try next time</h4>
+            break;
+        default:<h4>Invalid grade!</h4>
+            break;
     }
 
 </div>
