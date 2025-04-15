@@ -12,9 +12,7 @@ public class IndexModel : PageModel
         _logger = logger;
     }
 
-    public StudentFormModel StudentForm { get; set; }
     public void OnGet()
     {
-        StudentForm = new StudentFormModel();
     }
 }
