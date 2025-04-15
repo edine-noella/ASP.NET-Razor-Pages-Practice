@@ -9,11 +9,11 @@ public class StudentFormModel : PageModel
     public string Name { get; set; }
 
 private readonly ILogger<StudentFormModel> _logger;
-
-public StudentFormModel(ILogger<StudentFormModel> logger)
-{
-    _logger = logger;
-}
+public StudentFormModel() { }
+// public StudentFormModel(ILogger<StudentFormModel> logger)
+// {
+//     _logger = logger;
+// }
 
 
     public void OnGet()
