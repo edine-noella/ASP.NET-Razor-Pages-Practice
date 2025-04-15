@@ -1,0 +1,26 @@
+@page
+@model StudentFormModel
+
+@{
+    ViewData["Title"] = "Student Form";
+}
+
+<div>
+    <h3 class="text-center p-3">@ViewData["Title"]</h3>
+    <h4 class="p-3">Say Hello</h4>
+
+    <form class="" method="post">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name:</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Say Hello</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Name))
+    {
+        <h3 class="mt-4">Hello, it's @Model.Name!</h3>
+    }
+    
+</div>
